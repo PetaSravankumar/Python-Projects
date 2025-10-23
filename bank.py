@@ -1,6 +1,7 @@
 Name=input("enter the Name of the customer:")
 Account_Number=int(input("enter the account Number:"))
 Balance=1000
+new_ammount=0
 print("Sucessfull created the New Account !")
 mark=0
 while mark==0:
@@ -15,6 +16,11 @@ while mark==0:
         print("Account Number :",Account_Number)
         print("Balance Amount :",Balance)
     elif choice==2:
-        if Account_Number==int(input("enter the Account NUmber")):
-            print("working")
-            break
+        if Account_Number==int(input("enter the Account Number")):
+            new_ammount=int(input("Enter the Amount to Deposit :"))
+            Balance+=new_ammount
+            print("Amount creadited Sucessfully :!")
+            print("The Account Balance :",Balance)
+    elif choice==3:
+        if Account_Number==int(input("enter the Account Number")):
+            new_ammount=int(input("Enter the Amount to Withdraw  :"))
