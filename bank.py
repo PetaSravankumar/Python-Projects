@@ -24,3 +24,11 @@ while mark==0:
     elif choice==3:
         if Account_Number==int(input("enter the Account Number")):
             new_ammount=int(input("Enter the Amount to Withdraw  :"))
+            Balance-=new_ammount
+            print("Amount withdraw Sucessfully !")
+            print("The Account Balance :",Balance)
+    elif choice==4:
+        if Account_Number==int(input("enter the Account Number")):
+            print("Account Balance :",Balance)
+    else:
+        mark=1
