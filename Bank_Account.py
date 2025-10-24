@@ -85,7 +85,7 @@ class Bank:
             print("Valid ammount ")
         
     def display(self):
-        
+        print("Account Holder Name : ",self.Name)
         print("Balance Amount : ",self.Balance)
 account={}
 
