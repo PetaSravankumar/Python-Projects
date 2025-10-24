@@ -5,18 +5,18 @@ class Bank:
         self.Balance=1000
     def create(self):
         print("Account Holder Name :",self.Name)
-        print("Account Number :",self.Account_number)
+        print("Account Number :",self.Account_Number)
         print("Account Balance :",self.Balance)
         print("Account Created Scessfully :!")
     def Deposit(self):
-        if self.Account_Number==int(input("enter the Account Number")):
+        if self.Account_Number==int(input("enter the Account Number  :")):
             new_Amount=int(input("Enter the Deposit Ammount :"))
             self.Balance+=new_Amount
             print("Account Balance : ",self.Balance)
         else:
             print("enter the Valid Account Number")
     def Withdraw(self):
-        if self.Account_Number==int(input("enter the Account Number")):
+        if self.Account_Number==int(input("enter the Account Number :")):
             new_amount=int(input("Enter the Amount to withdraw : "))
             if self.Balance>=new_amount:
                 self.Balance-=new_amount
@@ -27,7 +27,7 @@ class Bank:
         else:
             print("enter the Valid Account Number")
     def display(self):
-        if self.Account_Number==int(input("enter the Account Number")):
+        if self.Account_Number==int(input("enter the Account Number :")):
             print("Balance Amount : ",self.Balance)
         else:
             print("enter the Valid Account Number")
@@ -50,5 +50,6 @@ while mark==0:
         b1.display()
     elif choice==5:
         mark=1
+        print("Thank you for Entering Bank !")
     else:
         print("enter the  valid input")
