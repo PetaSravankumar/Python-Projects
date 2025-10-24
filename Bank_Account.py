@@ -98,7 +98,7 @@ mark=0
 while mark==0:
     choice=int(input("Enter the choice of 1 ,2 ,3, 4, 5 : " ))
     if choice==1:
-        name=input("Enter the customer Name")
+        name=input("Enter the customer Name : ")
         b1=Bank(name)
         account[b1.Account_Number]=b1
         b1.create()
