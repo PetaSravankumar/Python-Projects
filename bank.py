@@ -25,7 +25,7 @@ while mark==0:
         else:
             print("enter the Valid Account Number")
     elif choice==3:
-        if Account_Number==int(input("enter the Account Number")):
+        if Account_Number==int(input("enter the Account Number :")):
             new_ammount=int(input("Enter the Amount to Withdraw  :"))
             if Balance>=new_ammount:
                 Balance-=new_ammount
@@ -35,11 +35,12 @@ while mark==0:
                 print("Insufficent Balance:")
                 print("Enter the valid Amount")
         else:
-            print("enter the Valid Account Number")
+            print("enter the Valid Account Number :")
     elif choice==4:
-        if Account_Number==int(input("enter the Account Number")):
+        if Account_Number==int(input("enter the Account Number :")):
             print("Account Balance :",Balance)
         else:
             print("enter the Valid Account Number")
     else:
         mark=1
+print("sravan")
