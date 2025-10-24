@@ -1,7 +1,7 @@
 class Bank:
     def __init__(self,Name,Account_Number):
         self.Name=Name
-        self.Account_number=Account_Number
+        self.Account_Number=Account_Number
     def create(self):
         print("Account Holder Name :",self.Name)
         print("Account Number :",self.Account_number)
@@ -9,19 +9,28 @@ class Bank:
         print("Account Balance :",self.Balance)
         print("Account Created Scessfully :!")
     def Deposit(self):
-        new_Amount=int(input("Enter the Deposit Ammount :"))
-        self.Balance+=new_Amount
-        print("Account Balance : ",self.Balance)
-    def Withdraw(self):
-        new_amount=int(input("Enter the Amount to withdraw : "))
-        if self.Balance>=new_amount:
-            self.Balance-=new_amount
-            print("Account Balance :",self.Balance)
+        if self.Account_Number==int(input("enter the Account Number")):
+            new_Amount=int(input("Enter the Deposit Ammount :"))
+            self.Balance+=new_Amount
+            print("Account Balance : ",self.Balance)
         else:
-            print("Insufficent Balance")
-            print("Valid ammount ")
+            print("enter the Valid Account Number")
+    def Withdraw(self):
+        if self.Account_Number==int(input("enter the Account Number")):
+            new_amount=int(input("Enter the Amount to withdraw : "))
+            if self.Balance>=new_amount:
+                self.Balance-=new_amount
+                print("Account Balance :",self.Balance)
+            else:
+                print("Insufficent Balance")
+                print("Valid ammount ")
+        else:
+            print("enter the Valid Account Number")
     def display(self):
-        print("Balance Amount : ",self.Balance)
+        if self.Account_Number==int(input("enter the Account Number")):
+            print("Balance Amount : ",self.Balance)
+        else:
+            print("enter the Valid Account Number")
 b1=Bank("sravan",101)
 print("1: To Create the Account ")
 print("2: Deposit the Money")
