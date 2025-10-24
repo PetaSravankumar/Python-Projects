@@ -2,10 +2,10 @@ class Bank:
     def __init__(self,Name,Account_Number):
         self.Name=Name
         self.Account_Number=Account_Number
+        self.Balance=1000
     def create(self):
         print("Account Holder Name :",self.Name)
         print("Account Number :",self.Account_number)
-        self.Balance=1000
         print("Account Balance :",self.Balance)
         print("Account Created Scessfully :!")
     def Deposit(self):
