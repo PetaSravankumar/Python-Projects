@@ -112,13 +112,13 @@ while mark==0:
     elif choice==3:
         acc=int(input("Enter the Account Number :"))
         if acc in account:
-            account[acc].b1.Withdraw()
+            account[acc].Withdraw()
         else:
             print("enter the Valid Account Number")
     elif choice==4:
         acc=int(input("Enter the Account Number :"))
         if acc in account:
-            account[acc].b1.display()
+            account[acc].display()
         else:
             print("enter the Valid Account Number")
     elif choice==5:
