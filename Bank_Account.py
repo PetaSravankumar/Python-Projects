@@ -1,3 +1,4 @@
+
 # class Bank:
 #     def __init__(self,Name,Account_Number):
 #         self.Name=Name
@@ -59,9 +60,10 @@
 
 class Bank:
     new_account_num=1001
-    def __init__(self,Name):
+    def __init__(self,Name,pin):
         self.Name=Name
         self.Account_Number=Bank.new_account_num
+        self.pin=pin
         self.Balance=1000
         Bank.new_account_num+=1
     def create(self):
@@ -72,8 +74,11 @@ class Bank:
     def Deposit(self):
     
         new_Amount=int(input("Enter the Deposit Ammount :"))
-        self.Balance+=new_Amount
-        print("Account Balance : ",self.Balance)
+        if new_Amount>0:
+            self.Balance+=new_Amount
+            print("Account Balance : ",self.Balance)
+        else:
+            print("Enter the valid Amount")
         
     def Withdraw(self):
         new_amount=int(input("Enter the Amount to withdraw : "))
@@ -100,25 +105,42 @@ while mark==0:
     choice=int(input("Enter the choice of 1 ,2 ,3, 4, 5 : " ))
     if choice==1:
         name=input("Enter the customer Name : ")
-        b1=Bank(name)
+        pin=input("set a 4 digit number as your pin :")
+        if not pin.isdigit() or len(pin)!=4:
+            print("pin must be exactly 4 digits")
+            continue
+        b1=Bank(name,pin)
         account[b1.Account_Number]=b1
         b1.create()
     elif choice==2:
         acc=int(input("Enter the Account Number :"))
         if acc in account:
-            account[acc].Deposit()
+            pin1=input("enter the account pin :")
+            if pin1==account[acc].pin:
+                account[acc].Deposit()
+            else:
+                print("enter the Valid pin to login")
         else:
             print("enter the Valid Account Number")
     elif choice==3:
         acc=int(input("Enter the Account Number :"))
+
         if acc in account:
-            account[acc].Withdraw()
+            pin1=input("enter the account pin :")
+            if pin1==account[acc].pin:
+                account[acc].Withdraw()
+            else:
+                print("enter the Valid pin to login")
         else:
             print("enter the Valid Account Number")
     elif choice==4:
         acc=int(input("Enter the Account Number :"))
         if acc in account:
-            account[acc].display()
+            pin1=input("enter the account pin :")
+            if pin1==account[acc].pin:
+                account[acc].display()
+            else:
+                print("enter the Valid pin to login")
         else:
             print("enter the Valid Account Number")
     elif choice==5:
