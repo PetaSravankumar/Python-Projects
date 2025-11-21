@@ -15,4 +15,9 @@ while count<=2:
         print("You have gussed it correct ",n)
     elif n>guss :
         print("The gussing number is too low ")
-        
+        no_of_chances()
+    elif n<guss:
+        print("The gussing is high")
+        no_of_chances()
+    count+=1
+    
