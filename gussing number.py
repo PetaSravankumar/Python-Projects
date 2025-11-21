@@ -8,6 +8,7 @@ def no_of_chances():
         print("you have 1 chance !")
     else:
         print("you have Loss try again")
+        print("Number is ",n)
 while count<=2:
     guss=int(input("guss the number :"))
     if guss==n:
@@ -20,4 +21,3 @@ while count<=2:
         print("The gussing is high")
         no_of_chances()
     count+=1
-    
