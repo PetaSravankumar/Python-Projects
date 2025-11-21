@@ -6,9 +6,11 @@ def no_of_chances():
         print("you have 2 chances !")
     elif count==1:
         print("you have 1 chance !")
+        li=[]
         for i in range(2,12):
             if n%i==0:
-                
+                li.append(i)
+        print("IT is the multiple of ",li)
 while count<=2:
     guss=int(input("guss the number :"))
     if guss==n:
