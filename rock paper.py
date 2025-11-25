@@ -14,7 +14,28 @@ num=int(input("Enter the number to Choose the 1: Rock , 2: Scissor ,3 : Paper"))
 choice=""
 if num==1:
     choice="Rock"
-if "Rock"==fun():
-    print("It is draw ")
-elif "Scissor"==fun():
-    print("")
+elif num==2:
+    choice="Scissor"
+elif num==3:
+    choice="Paper"
+if choice=="Rock":
+    if "Rock"==fun():
+        print("It is draw ")
+    elif "Scissor"==fun():
+        print("You win")
+    else:
+        print("You loss")
+elif choice=="Scissor":
+    if "Rock"==fun():
+        print("It is Loss ")
+    elif "Scissor"==fun():
+        print("You Draw")
+    else:
+        print("You Win")
+else:
+    if "Rock"==fun():
+        print("It is Win")
+    elif "Scissor"==fun():
+        print("You loss")
+    else:
+        print("You Draw")
